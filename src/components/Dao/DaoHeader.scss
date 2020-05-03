@@ -94,6 +94,20 @@
     margin-top: 20%;
   }
 
+  .daoImg {
+    top: -40px !important;
+    left: 5px !important;
+    position: absolute;
+  }
+
+  .headerWrap {
+    padding-top: 10vh;
+  }
+
+  .daoInfo {
+    margin-left: 8% !important;
+    margin-top: 31% !important;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -105,3 +119,16 @@
     margin-left: 42% !important;
   }
 }
+
+@media only screen and (max-width: 650px) { 
+  .daoImg {
+    top: -75px;
+    left: 75px;
+    position: absolute;
+  }
+
+  .daoInfo {
+    margin-left: 25% !important;
+    margin-top: 8% !important;
+  }
+} 
