@@ -92,6 +92,7 @@ class SidebarMenu extends React.Component<IProps, IStateProps> {
 
     return (
       <div>
+       {/*  {console.log(dao.reputationTotalSupply)} */}
         <div className={css.daoName}>
           <Link to={"/dao/" + dao.address} onClick={this.handleCloseMenu}>
             <b className={css.daoIcon} style={{ backgroundImage: bgPattern.toDataUrl() }}></b>
@@ -225,7 +226,6 @@ class SidebarMenu extends React.Component<IProps, IStateProps> {
       <div className={sidebarClass}>
         <div className={css.menuContent}>
           { this.props.daoAvatarAddress && this.props.data ? this.daoMenu() : ""}
-
           <div className={css.siteLinksWrapper}>
             <ul>
               <li><Link to="/" onClick={this.handleCloseMenu}>Home</Link></li>
