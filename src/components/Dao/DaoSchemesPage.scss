@@ -44,10 +44,10 @@
 .daoHeaderBackground {
   // @TODO Image is repeating, check this later when using real image
   // background-image: url(/assets/images/bg-test.jpeg);
-  position: fixed;
+  width: 115%;
+  position: absolute;
   display: flex;
   height: 30%;
-  width: 100vw;
   top:0;
   right: 0;
   z-index: 9999999;
