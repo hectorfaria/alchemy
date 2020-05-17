@@ -33,11 +33,12 @@ const Fade = ({ children, ...props }: any) => (
   </CSSTransition>
 );
 
-const DAOHeaderBackground = (props: any) => (
-  <div
+const DAOHeaderBackground = (props: { backgroundImage: string }) => (
+  <img
     className={css.daoHeaderBackground}
-    style={{ backgroundImage: `url(${props.backgroundImage})`, backgroundRepeat: "no-repeat" }}
-  ></div>
+    src={props.backgroundImage}
+    alt=""
+  />
 );
 
 type IExternalProps = {
@@ -71,7 +72,7 @@ class DaoSchemesPage extends React.Component<IProps, null> {
     // Once backend issues our fix we will uncomment lines 71, 72.
     // const daoHeaderBackground = signal ? JSON.parse(signal.data).Header : null;
     // const backgroundImage = daoHeaderBackground ? daoHeaderBackground : null;
-    const backgroundImage = 'https://w.wallhaven.cc/full/13/wallhaven-13mk9v.jpg'
+    const backgroundImage = 'https://i.picsum.photos/id/1006/1081/350.jpg'
     const contributionReward = allSchemes.filter((scheme: Scheme) => scheme.staticState.name === "ContributionReward");
     const knownSchemes = allSchemes.filter((scheme: Scheme) => scheme.staticState.name !== "ContributionReward" && KNOWN_SCHEME_NAMES.indexOf(scheme.staticState.name) >= 0);
     const unknownSchemes = allSchemes.filter((scheme: Scheme) =>  KNOWN_SCHEME_NAMES.indexOf(scheme.staticState.name) === -1 );
