@@ -33,11 +33,12 @@ const Fade = ({ children, ...props }: any) => (
   </CSSTransition>
 );
 
-const DAOHeaderBackground = (props: any) => (
-  <div
+const DAOHeaderBackground = (props: { backgroundImage: string }) => (
+  <img
     className={css.daoHeaderBackground}
-    style={{ backgroundImage: `url(${props.backgroundImage})`, backgroundRepeat: "no-repeat" }}
-  ></div>
+    src={props.backgroundImage}
+    alt=""
+  />
 );
 
 type IExternalProps = {
