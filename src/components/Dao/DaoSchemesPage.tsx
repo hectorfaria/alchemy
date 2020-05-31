@@ -34,10 +34,9 @@ const Fade = ({ children, ...props }: any) => (
 );
 
 const DAOHeaderBackground = (props: { backgroundImage: string }) => (
-  <img
+  <div
     className={css.daoHeaderBackground}
-    src={props.backgroundImage}
-    alt="daoHeaderBackground"
+    style={{ backgroundImage: `url(${props.backgroundImage})`}}
   />
 );
 
